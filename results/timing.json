@@ -1,0 +1,115 @@
+{
+ "throughput": [
+  {
+   "target": "qpp-cpu",
+   "n": 8,
+   "layers": 8,
+   "circuits": 20,
+   "seconds": 0.7444292493164539,
+   "circuits_per_s": 26.866220018039726
+  },
+  {
+   "target": "qpp-cpu",
+   "n": 12,
+   "layers": 12,
+   "circuits": 20,
+   "seconds": 1.905272487550974,
+   "circuits_per_s": 10.497186166640072
+  },
+  {
+   "target": "qpp-cpu",
+   "n": 16,
+   "layers": 16,
+   "circuits": 20,
+   "seconds": 17.889615647494793,
+   "circuits_per_s": 1.1179670035449163
+  },
+  {
+   "target": "qpp-cpu",
+   "n": 20,
+   "layers": 20,
+   "circuits": 20,
+   "seconds": 466.32273857295513,
+   "circuits_per_s": 0.042888751385369225
+  },
+  {
+   "target": "qpp-cpu",
+   "n": 22,
+   "layers": 22,
+   "circuits": 20,
+   "seconds": 2717.858100824058,
+   "circuits_per_s": 0.007358735908227135
+  },
+  {
+   "target": "nvidia-fp64",
+   "n": 8,
+   "layers": 8,
+   "circuits": 20,
+   "seconds": 0.6840135492384434,
+   "circuits_per_s": 29.239186887843516
+  },
+  {
+   "target": "nvidia-fp64",
+   "n": 12,
+   "layers": 12,
+   "circuits": 20,
+   "seconds": 1.3093469552695751,
+   "circuits_per_s": 15.274790168876436
+  },
+  {
+   "target": "nvidia-fp64",
+   "n": 16,
+   "layers": 16,
+   "circuits": 20,
+   "seconds": 2.203689195215702,
+   "circuits_per_s": 9.075690003572557
+  },
+  {
+   "target": "nvidia-fp64",
+   "n": 20,
+   "layers": 20,
+   "circuits": 20,
+   "seconds": 3.895360581576824,
+   "circuits_per_s": 5.134312878399589
+  },
+  {
+   "target": "nvidia-fp64",
+   "n": 22,
+   "layers": 22,
+   "circuits": 20,
+   "seconds": 6.8435161635279655,
+   "circuits_per_s": 2.9224742839928664
+  },
+  {
+   "target": "nvidia-fp64",
+   "n": 24,
+   "layers": 24,
+   "circuits": 20,
+   "seconds": 18.82989924773574,
+   "circuits_per_s": 1.0621405742468306
+  }
+ ],
+ "overhead": [
+  {
+   "n": 12,
+   "circuits": 100,
+   "plain_s": 6.736966133117676,
+   "recorded_s": 6.764125190675259,
+   "overhead_pct": 0.40313483875291656
+  },
+  {
+   "n": 20,
+   "circuits": 100,
+   "plain_s": 19.943117432296276,
+   "recorded_s": 19.997969646006823,
+   "overhead_pct": 0.27504332708645496
+  },
+  {
+   "n": 24,
+   "circuits": 100,
+   "plain_s": 94.90679958462715,
+   "recorded_s": 95.0674224384129,
+   "overhead_pct": 0.16924272495622006
+  }
+ ]
+}
