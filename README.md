@@ -1,6 +1,6 @@
 # Trainability vs. classical simulability: a HilbertBench pilot on CUDA-Q
 
-Do variational quantum circuits that keep their gradient signal also stay easy to simulate classically? Cerezo et al. ([arXiv:2312.09121](https://arxiv.org/abs/2312.09121)) argue that provable absence of barren plateaus often comes with classical simulability. This pilot measures both sides on one GPU for four circuit families:
+Do variational quantum circuits that keep their gradient signal also stay easy to simulate classically? Cerezo et al. (*Nature Communications* 16, 7907, 2025; [arXiv:2312.09121](https://arxiv.org/abs/2312.09121)) argue that provable absence of barren plateaus often comes with classical simulability. This pilot measures both sides on one GPU for four circuit families:
 
 - **Trainability:** gradient variance against qubit count.
 - **Classical simulability:** the matrix-product-state (MPS) bond dimension needed to reproduce the same cost landscape.
@@ -9,7 +9,7 @@ Every circuit execution was recorded through a prototype [HilbertBench](https://
 
 ![Figure 1](results/figure1_pilot.png)
 
-*(a) Variance of the parameter-shift gradient against qubit count on the CUDA-Q `nvidia` target (fp64, 200 random draws per point, 95% bootstrap intervals). Open diamonds are `tensornet-mps` runs at 50 and 100 qubits. (b) Each configuration's path as n grows from 8 to 20: gradient variance against the smallest MPS bond dimension that reproduces its cost values to within 10% of their spread. Shading uses illustrative thresholds.*
+*(a) Variance of the parameter-shift gradient against qubit count on the CUDA-Q `nvidia` target (fp64, 200 random draws per point, 95% bootstrap intervals). Open diamonds are `tensornet-mps` runs at 50 and 100 qubits. (b) Each configuration's path as n grows from 8 to 20: gradient variance against the smallest MPS bond dimension that reproduces its cost values to within 10% of their spread. The shaded box marks circuits that stay trainable while their bond dimension keeps growing. It is not a hardness claim: χ = 64 at 20 qubits is still cheap for an MPS.*
 
 ## Setup
 
@@ -22,7 +22,7 @@ All circuits use a hardware-efficient ansatz: L layers of RY on every qubit foll
 | `local_log` | Z₀Z₁ | ⌈log₂ n⌉ |
 | `local_deep` | Z₀Z₁ | n |
 
-- **Hardware:** one NVIDIA A40 (46 GB) on a university SLURM cluster, driver 555.42.06.
+- **Hardware:** one NVIDIA A40 (48 GB) on a university SLURM cluster, driver 555.42.06.
 - **Software:** CUDA-Q 0.14.2 (`nvidia` target in fp64; `tensornet-mps` for MPS), HilbertBench 1.0.
 - **Sweep:** n = 4 to 26 in steps of 2, 200 draws per point, so 400 circuit executions per point and 19,200 in total.
 - **MPS check:** 20 draws at n = 8, 12, 16, 20, with maximum bond dimension χ ∈ {2, 4, …, 256} and truncation cutoffs set to 10⁻¹², so χ is the only truncation.
@@ -50,7 +50,7 @@ All circuits use a hardware-efficient ansatz: L layers of RY on every qubit foll
 
 ## What this does and does not show
 
-- **The shallow results are expected, not discoveries.** Two CZ layers cap the bond dimension at 4, and shallow local-cost trainability is known (Cerezo et al., *Nature Communications* 12, 1791, 2021). They are here as controls.
+- **The shallow results are expected, not discoveries.** Two CZ layers cap the bond dimension at 4, and shallow local-cost trainability is known (Cerezo, Sone, Volkoff, Cincio and Coles, *Nature Communications* 12, 1791, 2021). They are here as controls.
 - **The linear-depth behaviour may be a small-size effect.** Over 4–26 qubits, exponential and polynomial decay cannot be told apart reliably.
 - **Only one classical method was tested.** Pauli propagation, Clifford-augmented MPS, or light-cone tensor contraction may simulate these circuits far more cheaply than plain MPS.
 - **The bond dimension is set by a chosen tolerance:** reproduce cost values to within 10% of their spread over 20 draws. Exact reproduction of the deep circuits needs χ = 2^(n/2).
@@ -61,7 +61,7 @@ All circuits use a hardware-efficient ansatz: L layers of RY on every qubit foll
 ```bash
 python3 -m venv .venv && .venv/bin/python -m pip install -r requirements.txt
 sbatch slurm/pilot_variance.sbatch      # gradient-variance sweep, recorded by HilbertBench (about 1 h on an A40)
-sbatch slurm/pilot_rest.sbatch          # exact values and MPS bond-dimension sweep (about 1.5 h)
+sbatch slurm/pilot_rest.sbatch          # exact values and MPS bond-dimension sweep (about 1.5-2 h)
 sbatch slurm/pilot_large_timing.sbatch  # 50- and 100-qubit MPS runs, CPU/GPU timing (about 1 h)
 .venv/bin/python analyze.py             # fits, Figure 1, results/summary.json, trace verification
 ```
@@ -96,6 +96,6 @@ Each execution becomes one span holding the kernel IR, parameters, observable an
 
 ## How this was built
 
-The study design, code and analysis were developed with an AI coding agent (Claude Code) under my direction, and I ran the experiments on a university cluster. Every number above comes from the committed result files and can be regenerated with the scripts.
+The experiments ran on 16 October 2026, and this write-up was published on 3 November 2026. The study design, code and analysis were developed with an AI coding agent (Claude Code) under my direction, and I ran the experiments on a university cluster. Every number above comes from the committed result files and can be regenerated with the scripts.
 
 Md. Abdullah Al Mamun · [mamuncseru.github.io](https://mamuncseru.github.io) · MIT License

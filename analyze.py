@@ -133,7 +133,7 @@ def make_figure(fits, mps_res, sim_growth, large, path):
     map_ns = [8, 12, 16, 20]
     x_lo, x_hi, y_hi = -22, 0, 8.6
     ax2.add_patch(matplotlib.patches.Rectangle((-10, 5), 10, y_hi - 5, color="#76b900", alpha=0.13, lw=0))
-    ax2.text(-9.7, 8.35, "trainable and\nhard to simulate", fontsize=6.2, color="#3d6000", va="top")
+    ax2.text(-9.7, 8.35, "trainable while\nbond dim. keeps growing", fontsize=6.2, color="#3d6000", va="top")
     for c in ORDER:
         xs = [np.log2(fits[c]["var_at"][n]) for n in map_ns]
         chis = [sim_growth[c]["chi_needed"][n] for n in map_ns]
