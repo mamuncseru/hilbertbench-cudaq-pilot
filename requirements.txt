@@ -1,0 +1,7 @@
+cudaq==0.14.2
+hilbertbench
+numpy
+scipy
+matplotlib
+pandas
+pyarrow

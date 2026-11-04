@@ -81,8 +81,14 @@ def simulation_growth(mps_res):
 
 def trace_check(rows, grads):
     from hilbertbench import HilbertTrace
-    tdir = [r["trace_dir"] for r in rows if "trace_dir" in r][0]
-    t = HilbertTrace(tdir)
+    tdir = Path([r["trace_dir"] for r in rows if "trace_dir" in r][0])
+    tdir = tdir if tdir.is_absolute() else HERE / tdir
+    events, packed = tdir / "events.jsonl", tdir / "events.jsonl.gz"
+    if not events.exists() and packed.exists():
+        import gzip, shutil  # the published trace ships compressed; restore it byte for byte
+        with gzip.open(packed, "rb") as src, open(events, "wb") as dst:
+            shutil.copyfileobj(src, dst)
+    t = HilbertTrace(str(tdir))
     outcomes = t.numeric_outcomes()
     k, max_diff = 0, 0.0
     for r in [r for r in rows if "config" in r]:
@@ -90,7 +96,7 @@ def trace_check(rows, grads):
         g = 0.5 * (block[:r["draws"]] - block[r["draws"]:])
         max_diff = max(max_diff, float(np.max(np.abs(g - grads[f"{r['config']}_n{r['n']}"]))))
         k += 2 * r["draws"]
-    return {"trace_dir": tdir, "status": t.status, "verified": bool(t.verify()),
+    return {"trace_dir": str(tdir.relative_to(HERE)), "status": t.status, "verified": bool(t.verify()),
             "spans": len(t.completed()), "max_abs_diff_trace_vs_memory": max_diff}
 
 

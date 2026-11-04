@@ -1,0 +1,437 @@
+module attributes {quake.mangled_name_map = {__nvqpp__mlirgen__PythonKernelBuilderInstance..0x7f4b8c4f9fd0 = "PythonKernelBuilderInstance..0x7f4b8c4f9fd0.PyKernelFakeEntryPoint"}} {
+  func.func @__nvqpp__mlirgen__PythonKernelBuilderInstance..0x7f4b8c4f9fd0(%arg0: !cc.stdvec<f64>) attributes {"cudaq-entrypoint", "cudaq-kernel"} {
+    %0 = quake.alloca !quake.veq<10>
+    %1 = cc.stdvec_data %arg0 : (!cc.stdvec<f64>) -> !cc.ptr<!cc.array<f64 x ?>>
+    %2 = cc.cast %1 : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %3 = cc.load %2 : !cc.ptr<f64>
+    %4 = quake.extract_ref %0[0] : (!quake.veq<10>) -> !quake.ref
+    quake.ry (%3) %4 : (f64, !quake.ref) -> ()
+    %5 = cc.compute_ptr %1[1] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %6 = cc.load %5 : !cc.ptr<f64>
+    %7 = quake.extract_ref %0[1] : (!quake.veq<10>) -> !quake.ref
+    quake.ry (%6) %7 : (f64, !quake.ref) -> ()
+    %8 = cc.compute_ptr %1[2] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %9 = cc.load %8 : !cc.ptr<f64>
+    %10 = quake.extract_ref %0[2] : (!quake.veq<10>) -> !quake.ref
+    quake.ry (%9) %10 : (f64, !quake.ref) -> ()
+    %11 = cc.compute_ptr %1[3] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %12 = cc.load %11 : !cc.ptr<f64>
+    %13 = quake.extract_ref %0[3] : (!quake.veq<10>) -> !quake.ref
+    quake.ry (%12) %13 : (f64, !quake.ref) -> ()
+    %14 = cc.compute_ptr %1[4] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %15 = cc.load %14 : !cc.ptr<f64>
+    %16 = quake.extract_ref %0[4] : (!quake.veq<10>) -> !quake.ref
+    quake.ry (%15) %16 : (f64, !quake.ref) -> ()
+    %17 = cc.compute_ptr %1[5] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %18 = cc.load %17 : !cc.ptr<f64>
+    %19 = quake.extract_ref %0[5] : (!quake.veq<10>) -> !quake.ref
+    quake.ry (%18) %19 : (f64, !quake.ref) -> ()
+    %20 = cc.compute_ptr %1[6] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %21 = cc.load %20 : !cc.ptr<f64>
+    %22 = quake.extract_ref %0[6] : (!quake.veq<10>) -> !quake.ref
+    quake.ry (%21) %22 : (f64, !quake.ref) -> ()
+    %23 = cc.compute_ptr %1[7] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %24 = cc.load %23 : !cc.ptr<f64>
+    %25 = quake.extract_ref %0[7] : (!quake.veq<10>) -> !quake.ref
+    quake.ry (%24) %25 : (f64, !quake.ref) -> ()
+    %26 = cc.compute_ptr %1[8] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %27 = cc.load %26 : !cc.ptr<f64>
+    %28 = quake.extract_ref %0[8] : (!quake.veq<10>) -> !quake.ref
+    quake.ry (%27) %28 : (f64, !quake.ref) -> ()
+    %29 = cc.compute_ptr %1[9] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %30 = cc.load %29 : !cc.ptr<f64>
+    %31 = quake.extract_ref %0[9] : (!quake.veq<10>) -> !quake.ref
+    quake.ry (%30) %31 : (f64, !quake.ref) -> ()
+    quake.z [%4] %7 : (!quake.ref, !quake.ref) -> ()
+    quake.z [%7] %10 : (!quake.ref, !quake.ref) -> ()
+    quake.z [%10] %13 : (!quake.ref, !quake.ref) -> ()
+    quake.z [%13] %16 : (!quake.ref, !quake.ref) -> ()
+    quake.z [%16] %19 : (!quake.ref, !quake.ref) -> ()
+    quake.z [%19] %22 : (!quake.ref, !quake.ref) -> ()
+    quake.z [%22] %25 : (!quake.ref, !quake.ref) -> ()
+    quake.z [%25] %28 : (!quake.ref, !quake.ref) -> ()
+    quake.z [%28] %31 : (!quake.ref, !quake.ref) -> ()
+    %32 = cc.compute_ptr %1[10] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %33 = cc.load %32 : !cc.ptr<f64>
+    quake.ry (%33) %4 : (f64, !quake.ref) -> ()
+    %34 = cc.compute_ptr %1[11] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %35 = cc.load %34 : !cc.ptr<f64>
+    quake.ry (%35) %7 : (f64, !quake.ref) -> ()
+    %36 = cc.compute_ptr %1[12] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %37 = cc.load %36 : !cc.ptr<f64>
+    quake.ry (%37) %10 : (f64, !quake.ref) -> ()
+    %38 = cc.compute_ptr %1[13] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %39 = cc.load %38 : !cc.ptr<f64>
+    quake.ry (%39) %13 : (f64, !quake.ref) -> ()
+    %40 = cc.compute_ptr %1[14] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %41 = cc.load %40 : !cc.ptr<f64>
+    quake.ry (%41) %16 : (f64, !quake.ref) -> ()
+    %42 = cc.compute_ptr %1[15] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %43 = cc.load %42 : !cc.ptr<f64>
+    quake.ry (%43) %19 : (f64, !quake.ref) -> ()
+    %44 = cc.compute_ptr %1[16] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %45 = cc.load %44 : !cc.ptr<f64>
+    quake.ry (%45) %22 : (f64, !quake.ref) -> ()
+    %46 = cc.compute_ptr %1[17] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %47 = cc.load %46 : !cc.ptr<f64>
+    quake.ry (%47) %25 : (f64, !quake.ref) -> ()
+    %48 = cc.compute_ptr %1[18] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %49 = cc.load %48 : !cc.ptr<f64>
+    quake.ry (%49) %28 : (f64, !quake.ref) -> ()
+    %50 = cc.compute_ptr %1[19] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %51 = cc.load %50 : !cc.ptr<f64>
+    quake.ry (%51) %31 : (f64, !quake.ref) -> ()
+    quake.z [%4] %7 : (!quake.ref, !quake.ref) -> ()
+    quake.z [%7] %10 : (!quake.ref, !quake.ref) -> ()
+    quake.z [%10] %13 : (!quake.ref, !quake.ref) -> ()
+    quake.z [%13] %16 : (!quake.ref, !quake.ref) -> ()
+    quake.z [%16] %19 : (!quake.ref, !quake.ref) -> ()
+    quake.z [%19] %22 : (!quake.ref, !quake.ref) -> ()
+    quake.z [%22] %25 : (!quake.ref, !quake.ref) -> ()
+    quake.z [%25] %28 : (!quake.ref, !quake.ref) -> ()
+    quake.z [%28] %31 : (!quake.ref, !quake.ref) -> ()
+    %52 = cc.compute_ptr %1[20] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %53 = cc.load %52 : !cc.ptr<f64>
+    quake.ry (%53) %4 : (f64, !quake.ref) -> ()
+    %54 = cc.compute_ptr %1[21] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %55 = cc.load %54 : !cc.ptr<f64>
+    quake.ry (%55) %7 : (f64, !quake.ref) -> ()
+    %56 = cc.compute_ptr %1[22] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %57 = cc.load %56 : !cc.ptr<f64>
+    quake.ry (%57) %10 : (f64, !quake.ref) -> ()
+    %58 = cc.compute_ptr %1[23] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %59 = cc.load %58 : !cc.ptr<f64>
+    quake.ry (%59) %13 : (f64, !quake.ref) -> ()
+    %60 = cc.compute_ptr %1[24] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %61 = cc.load %60 : !cc.ptr<f64>
+    quake.ry (%61) %16 : (f64, !quake.ref) -> ()
+    %62 = cc.compute_ptr %1[25] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %63 = cc.load %62 : !cc.ptr<f64>
+    quake.ry (%63) %19 : (f64, !quake.ref) -> ()
+    %64 = cc.compute_ptr %1[26] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %65 = cc.load %64 : !cc.ptr<f64>
+    quake.ry (%65) %22 : (f64, !quake.ref) -> ()
+    %66 = cc.compute_ptr %1[27] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %67 = cc.load %66 : !cc.ptr<f64>
+    quake.ry (%67) %25 : (f64, !quake.ref) -> ()
+    %68 = cc.compute_ptr %1[28] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %69 = cc.load %68 : !cc.ptr<f64>
+    quake.ry (%69) %28 : (f64, !quake.ref) -> ()
+    %70 = cc.compute_ptr %1[29] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %71 = cc.load %70 : !cc.ptr<f64>
+    quake.ry (%71) %31 : (f64, !quake.ref) -> ()
+    quake.z [%4] %7 : (!quake.ref, !quake.ref) -> ()
+    quake.z [%7] %10 : (!quake.ref, !quake.ref) -> ()
+    quake.z [%10] %13 : (!quake.ref, !quake.ref) -> ()
+    quake.z [%13] %16 : (!quake.ref, !quake.ref) -> ()
+    quake.z [%16] %19 : (!quake.ref, !quake.ref) -> ()
+    quake.z [%19] %22 : (!quake.ref, !quake.ref) -> ()
+    quake.z [%22] %25 : (!quake.ref, !quake.ref) -> ()
+    quake.z [%25] %28 : (!quake.ref, !quake.ref) -> ()
+    quake.z [%28] %31 : (!quake.ref, !quake.ref) -> ()
+    %72 = cc.compute_ptr %1[30] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %73 = cc.load %72 : !cc.ptr<f64>
+    quake.ry (%73) %4 : (f64, !quake.ref) -> ()
+    %74 = cc.compute_ptr %1[31] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %75 = cc.load %74 : !cc.ptr<f64>
+    quake.ry (%75) %7 : (f64, !quake.ref) -> ()
+    %76 = cc.compute_ptr %1[32] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %77 = cc.load %76 : !cc.ptr<f64>
+    quake.ry (%77) %10 : (f64, !quake.ref) -> ()
+    %78 = cc.compute_ptr %1[33] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %79 = cc.load %78 : !cc.ptr<f64>
+    quake.ry (%79) %13 : (f64, !quake.ref) -> ()
+    %80 = cc.compute_ptr %1[34] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %81 = cc.load %80 : !cc.ptr<f64>
+    quake.ry (%81) %16 : (f64, !quake.ref) -> ()
+    %82 = cc.compute_ptr %1[35] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %83 = cc.load %82 : !cc.ptr<f64>
+    quake.ry (%83) %19 : (f64, !quake.ref) -> ()
+    %84 = cc.compute_ptr %1[36] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %85 = cc.load %84 : !cc.ptr<f64>
+    quake.ry (%85) %22 : (f64, !quake.ref) -> ()
+    %86 = cc.compute_ptr %1[37] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %87 = cc.load %86 : !cc.ptr<f64>
+    quake.ry (%87) %25 : (f64, !quake.ref) -> ()
+    %88 = cc.compute_ptr %1[38] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %89 = cc.load %88 : !cc.ptr<f64>
+    quake.ry (%89) %28 : (f64, !quake.ref) -> ()
+    %90 = cc.compute_ptr %1[39] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %91 = cc.load %90 : !cc.ptr<f64>
+    quake.ry (%91) %31 : (f64, !quake.ref) -> ()
+    quake.z [%4] %7 : (!quake.ref, !quake.ref) -> ()
+    quake.z [%7] %10 : (!quake.ref, !quake.ref) -> ()
+    quake.z [%10] %13 : (!quake.ref, !quake.ref) -> ()
+    quake.z [%13] %16 : (!quake.ref, !quake.ref) -> ()
+    quake.z [%16] %19 : (!quake.ref, !quake.ref) -> ()
+    quake.z [%19] %22 : (!quake.ref, !quake.ref) -> ()
+    quake.z [%22] %25 : (!quake.ref, !quake.ref) -> ()
+    quake.z [%25] %28 : (!quake.ref, !quake.ref) -> ()
+    quake.z [%28] %31 : (!quake.ref, !quake.ref) -> ()
+    %92 = cc.compute_ptr %1[40] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %93 = cc.load %92 : !cc.ptr<f64>
+    quake.ry (%93) %4 : (f64, !quake.ref) -> ()
+    %94 = cc.compute_ptr %1[41] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %95 = cc.load %94 : !cc.ptr<f64>
+    quake.ry (%95) %7 : (f64, !quake.ref) -> ()
+    %96 = cc.compute_ptr %1[42] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %97 = cc.load %96 : !cc.ptr<f64>
+    quake.ry (%97) %10 : (f64, !quake.ref) -> ()
+    %98 = cc.compute_ptr %1[43] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %99 = cc.load %98 : !cc.ptr<f64>
+    quake.ry (%99) %13 : (f64, !quake.ref) -> ()
+    %100 = cc.compute_ptr %1[44] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %101 = cc.load %100 : !cc.ptr<f64>
+    quake.ry (%101) %16 : (f64, !quake.ref) -> ()
+    %102 = cc.compute_ptr %1[45] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %103 = cc.load %102 : !cc.ptr<f64>
+    quake.ry (%103) %19 : (f64, !quake.ref) -> ()
+    %104 = cc.compute_ptr %1[46] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %105 = cc.load %104 : !cc.ptr<f64>
+    quake.ry (%105) %22 : (f64, !quake.ref) -> ()
+    %106 = cc.compute_ptr %1[47] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %107 = cc.load %106 : !cc.ptr<f64>
+    quake.ry (%107) %25 : (f64, !quake.ref) -> ()
+    %108 = cc.compute_ptr %1[48] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %109 = cc.load %108 : !cc.ptr<f64>
+    quake.ry (%109) %28 : (f64, !quake.ref) -> ()
+    %110 = cc.compute_ptr %1[49] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %111 = cc.load %110 : !cc.ptr<f64>
+    quake.ry (%111) %31 : (f64, !quake.ref) -> ()
+    quake.z [%4] %7 : (!quake.ref, !quake.ref) -> ()
+    quake.z [%7] %10 : (!quake.ref, !quake.ref) -> ()
+    quake.z [%10] %13 : (!quake.ref, !quake.ref) -> ()
+    quake.z [%13] %16 : (!quake.ref, !quake.ref) -> ()
+    quake.z [%16] %19 : (!quake.ref, !quake.ref) -> ()
+    quake.z [%19] %22 : (!quake.ref, !quake.ref) -> ()
+    quake.z [%22] %25 : (!quake.ref, !quake.ref) -> ()
+    quake.z [%25] %28 : (!quake.ref, !quake.ref) -> ()
+    quake.z [%28] %31 : (!quake.ref, !quake.ref) -> ()
+    %112 = cc.compute_ptr %1[50] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %113 = cc.load %112 : !cc.ptr<f64>
+    quake.ry (%113) %4 : (f64, !quake.ref) -> ()
+    %114 = cc.compute_ptr %1[51] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %115 = cc.load %114 : !cc.ptr<f64>
+    quake.ry (%115) %7 : (f64, !quake.ref) -> ()
+    %116 = cc.compute_ptr %1[52] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %117 = cc.load %116 : !cc.ptr<f64>
+    quake.ry (%117) %10 : (f64, !quake.ref) -> ()
+    %118 = cc.compute_ptr %1[53] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %119 = cc.load %118 : !cc.ptr<f64>
+    quake.ry (%119) %13 : (f64, !quake.ref) -> ()
+    %120 = cc.compute_ptr %1[54] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %121 = cc.load %120 : !cc.ptr<f64>
+    quake.ry (%121) %16 : (f64, !quake.ref) -> ()
+    %122 = cc.compute_ptr %1[55] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %123 = cc.load %122 : !cc.ptr<f64>
+    quake.ry (%123) %19 : (f64, !quake.ref) -> ()
+    %124 = cc.compute_ptr %1[56] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %125 = cc.load %124 : !cc.ptr<f64>
+    quake.ry (%125) %22 : (f64, !quake.ref) -> ()
+    %126 = cc.compute_ptr %1[57] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %127 = cc.load %126 : !cc.ptr<f64>
+    quake.ry (%127) %25 : (f64, !quake.ref) -> ()
+    %128 = cc.compute_ptr %1[58] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %129 = cc.load %128 : !cc.ptr<f64>
+    quake.ry (%129) %28 : (f64, !quake.ref) -> ()
+    %130 = cc.compute_ptr %1[59] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %131 = cc.load %130 : !cc.ptr<f64>
+    quake.ry (%131) %31 : (f64, !quake.ref) -> ()
+    quake.z [%4] %7 : (!quake.ref, !quake.ref) -> ()
+    quake.z [%7] %10 : (!quake.ref, !quake.ref) -> ()
+    quake.z [%10] %13 : (!quake.ref, !quake.ref) -> ()
+    quake.z [%13] %16 : (!quake.ref, !quake.ref) -> ()
+    quake.z [%16] %19 : (!quake.ref, !quake.ref) -> ()
+    quake.z [%19] %22 : (!quake.ref, !quake.ref) -> ()
+    quake.z [%22] %25 : (!quake.ref, !quake.ref) -> ()
+    quake.z [%25] %28 : (!quake.ref, !quake.ref) -> ()
+    quake.z [%28] %31 : (!quake.ref, !quake.ref) -> ()
+    %132 = cc.compute_ptr %1[60] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %133 = cc.load %132 : !cc.ptr<f64>
+    quake.ry (%133) %4 : (f64, !quake.ref) -> ()
+    %134 = cc.compute_ptr %1[61] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %135 = cc.load %134 : !cc.ptr<f64>
+    quake.ry (%135) %7 : (f64, !quake.ref) -> ()
+    %136 = cc.compute_ptr %1[62] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %137 = cc.load %136 : !cc.ptr<f64>
+    quake.ry (%137) %10 : (f64, !quake.ref) -> ()
+    %138 = cc.compute_ptr %1[63] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %139 = cc.load %138 : !cc.ptr<f64>
+    quake.ry (%139) %13 : (f64, !quake.ref) -> ()
+    %140 = cc.compute_ptr %1[64] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %141 = cc.load %140 : !cc.ptr<f64>
+    quake.ry (%141) %16 : (f64, !quake.ref) -> ()
+    %142 = cc.compute_ptr %1[65] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %143 = cc.load %142 : !cc.ptr<f64>
+    quake.ry (%143) %19 : (f64, !quake.ref) -> ()
+    %144 = cc.compute_ptr %1[66] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %145 = cc.load %144 : !cc.ptr<f64>
+    quake.ry (%145) %22 : (f64, !quake.ref) -> ()
+    %146 = cc.compute_ptr %1[67] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %147 = cc.load %146 : !cc.ptr<f64>
+    quake.ry (%147) %25 : (f64, !quake.ref) -> ()
+    %148 = cc.compute_ptr %1[68] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %149 = cc.load %148 : !cc.ptr<f64>
+    quake.ry (%149) %28 : (f64, !quake.ref) -> ()
+    %150 = cc.compute_ptr %1[69] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %151 = cc.load %150 : !cc.ptr<f64>
+    quake.ry (%151) %31 : (f64, !quake.ref) -> ()
+    quake.z [%4] %7 : (!quake.ref, !quake.ref) -> ()
+    quake.z [%7] %10 : (!quake.ref, !quake.ref) -> ()
+    quake.z [%10] %13 : (!quake.ref, !quake.ref) -> ()
+    quake.z [%13] %16 : (!quake.ref, !quake.ref) -> ()
+    quake.z [%16] %19 : (!quake.ref, !quake.ref) -> ()
+    quake.z [%19] %22 : (!quake.ref, !quake.ref) -> ()
+    quake.z [%22] %25 : (!quake.ref, !quake.ref) -> ()
+    quake.z [%25] %28 : (!quake.ref, !quake.ref) -> ()
+    quake.z [%28] %31 : (!quake.ref, !quake.ref) -> ()
+    %152 = cc.compute_ptr %1[70] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %153 = cc.load %152 : !cc.ptr<f64>
+    quake.ry (%153) %4 : (f64, !quake.ref) -> ()
+    %154 = cc.compute_ptr %1[71] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %155 = cc.load %154 : !cc.ptr<f64>
+    quake.ry (%155) %7 : (f64, !quake.ref) -> ()
+    %156 = cc.compute_ptr %1[72] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %157 = cc.load %156 : !cc.ptr<f64>
+    quake.ry (%157) %10 : (f64, !quake.ref) -> ()
+    %158 = cc.compute_ptr %1[73] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %159 = cc.load %158 : !cc.ptr<f64>
+    quake.ry (%159) %13 : (f64, !quake.ref) -> ()
+    %160 = cc.compute_ptr %1[74] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %161 = cc.load %160 : !cc.ptr<f64>
+    quake.ry (%161) %16 : (f64, !quake.ref) -> ()
+    %162 = cc.compute_ptr %1[75] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %163 = cc.load %162 : !cc.ptr<f64>
+    quake.ry (%163) %19 : (f64, !quake.ref) -> ()
+    %164 = cc.compute_ptr %1[76] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %165 = cc.load %164 : !cc.ptr<f64>
+    quake.ry (%165) %22 : (f64, !quake.ref) -> ()
+    %166 = cc.compute_ptr %1[77] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %167 = cc.load %166 : !cc.ptr<f64>
+    quake.ry (%167) %25 : (f64, !quake.ref) -> ()
+    %168 = cc.compute_ptr %1[78] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %169 = cc.load %168 : !cc.ptr<f64>
+    quake.ry (%169) %28 : (f64, !quake.ref) -> ()
+    %170 = cc.compute_ptr %1[79] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %171 = cc.load %170 : !cc.ptr<f64>
+    quake.ry (%171) %31 : (f64, !quake.ref) -> ()
+    quake.z [%4] %7 : (!quake.ref, !quake.ref) -> ()
+    quake.z [%7] %10 : (!quake.ref, !quake.ref) -> ()
+    quake.z [%10] %13 : (!quake.ref, !quake.ref) -> ()
+    quake.z [%13] %16 : (!quake.ref, !quake.ref) -> ()
+    quake.z [%16] %19 : (!quake.ref, !quake.ref) -> ()
+    quake.z [%19] %22 : (!quake.ref, !quake.ref) -> ()
+    quake.z [%22] %25 : (!quake.ref, !quake.ref) -> ()
+    quake.z [%25] %28 : (!quake.ref, !quake.ref) -> ()
+    quake.z [%28] %31 : (!quake.ref, !quake.ref) -> ()
+    %172 = cc.compute_ptr %1[80] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %173 = cc.load %172 : !cc.ptr<f64>
+    quake.ry (%173) %4 : (f64, !quake.ref) -> ()
+    %174 = cc.compute_ptr %1[81] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %175 = cc.load %174 : !cc.ptr<f64>
+    quake.ry (%175) %7 : (f64, !quake.ref) -> ()
+    %176 = cc.compute_ptr %1[82] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %177 = cc.load %176 : !cc.ptr<f64>
+    quake.ry (%177) %10 : (f64, !quake.ref) -> ()
+    %178 = cc.compute_ptr %1[83] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %179 = cc.load %178 : !cc.ptr<f64>
+    quake.ry (%179) %13 : (f64, !quake.ref) -> ()
+    %180 = cc.compute_ptr %1[84] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %181 = cc.load %180 : !cc.ptr<f64>
+    quake.ry (%181) %16 : (f64, !quake.ref) -> ()
+    %182 = cc.compute_ptr %1[85] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %183 = cc.load %182 : !cc.ptr<f64>
+    quake.ry (%183) %19 : (f64, !quake.ref) -> ()
+    %184 = cc.compute_ptr %1[86] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %185 = cc.load %184 : !cc.ptr<f64>
+    quake.ry (%185) %22 : (f64, !quake.ref) -> ()
+    %186 = cc.compute_ptr %1[87] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %187 = cc.load %186 : !cc.ptr<f64>
+    quake.ry (%187) %25 : (f64, !quake.ref) -> ()
+    %188 = cc.compute_ptr %1[88] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %189 = cc.load %188 : !cc.ptr<f64>
+    quake.ry (%189) %28 : (f64, !quake.ref) -> ()
+    %190 = cc.compute_ptr %1[89] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %191 = cc.load %190 : !cc.ptr<f64>
+    quake.ry (%191) %31 : (f64, !quake.ref) -> ()
+    quake.z [%4] %7 : (!quake.ref, !quake.ref) -> ()
+    quake.z [%7] %10 : (!quake.ref, !quake.ref) -> ()
+    quake.z [%10] %13 : (!quake.ref, !quake.ref) -> ()
+    quake.z [%13] %16 : (!quake.ref, !quake.ref) -> ()
+    quake.z [%16] %19 : (!quake.ref, !quake.ref) -> ()
+    quake.z [%19] %22 : (!quake.ref, !quake.ref) -> ()
+    quake.z [%22] %25 : (!quake.ref, !quake.ref) -> ()
+    quake.z [%25] %28 : (!quake.ref, !quake.ref) -> ()
+    quake.z [%28] %31 : (!quake.ref, !quake.ref) -> ()
+    %192 = cc.compute_ptr %1[90] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %193 = cc.load %192 : !cc.ptr<f64>
+    quake.ry (%193) %4 : (f64, !quake.ref) -> ()
+    %194 = cc.compute_ptr %1[91] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %195 = cc.load %194 : !cc.ptr<f64>
+    quake.ry (%195) %7 : (f64, !quake.ref) -> ()
+    %196 = cc.compute_ptr %1[92] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %197 = cc.load %196 : !cc.ptr<f64>
+    quake.ry (%197) %10 : (f64, !quake.ref) -> ()
+    %198 = cc.compute_ptr %1[93] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %199 = cc.load %198 : !cc.ptr<f64>
+    quake.ry (%199) %13 : (f64, !quake.ref) -> ()
+    %200 = cc.compute_ptr %1[94] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %201 = cc.load %200 : !cc.ptr<f64>
+    quake.ry (%201) %16 : (f64, !quake.ref) -> ()
+    %202 = cc.compute_ptr %1[95] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %203 = cc.load %202 : !cc.ptr<f64>
+    quake.ry (%203) %19 : (f64, !quake.ref) -> ()
+    %204 = cc.compute_ptr %1[96] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %205 = cc.load %204 : !cc.ptr<f64>
+    quake.ry (%205) %22 : (f64, !quake.ref) -> ()
+    %206 = cc.compute_ptr %1[97] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %207 = cc.load %206 : !cc.ptr<f64>
+    quake.ry (%207) %25 : (f64, !quake.ref) -> ()
+    %208 = cc.compute_ptr %1[98] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %209 = cc.load %208 : !cc.ptr<f64>
+    quake.ry (%209) %28 : (f64, !quake.ref) -> ()
+    %210 = cc.compute_ptr %1[99] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %211 = cc.load %210 : !cc.ptr<f64>
+    quake.ry (%211) %31 : (f64, !quake.ref) -> ()
+    quake.z [%4] %7 : (!quake.ref, !quake.ref) -> ()
+    quake.z [%7] %10 : (!quake.ref, !quake.ref) -> ()
+    quake.z [%10] %13 : (!quake.ref, !quake.ref) -> ()
+    quake.z [%13] %16 : (!quake.ref, !quake.ref) -> ()
+    quake.z [%16] %19 : (!quake.ref, !quake.ref) -> ()
+    quake.z [%19] %22 : (!quake.ref, !quake.ref) -> ()
+    quake.z [%22] %25 : (!quake.ref, !quake.ref) -> ()
+    quake.z [%25] %28 : (!quake.ref, !quake.ref) -> ()
+    quake.z [%28] %31 : (!quake.ref, !quake.ref) -> ()
+    %212 = cc.compute_ptr %1[100] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %213 = cc.load %212 : !cc.ptr<f64>
+    quake.ry (%213) %4 : (f64, !quake.ref) -> ()
+    %214 = cc.compute_ptr %1[101] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %215 = cc.load %214 : !cc.ptr<f64>
+    quake.ry (%215) %7 : (f64, !quake.ref) -> ()
+    %216 = cc.compute_ptr %1[102] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %217 = cc.load %216 : !cc.ptr<f64>
+    quake.ry (%217) %10 : (f64, !quake.ref) -> ()
+    %218 = cc.compute_ptr %1[103] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %219 = cc.load %218 : !cc.ptr<f64>
+    quake.ry (%219) %13 : (f64, !quake.ref) -> ()
+    %220 = cc.compute_ptr %1[104] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %221 = cc.load %220 : !cc.ptr<f64>
+    quake.ry (%221) %16 : (f64, !quake.ref) -> ()
+    %222 = cc.compute_ptr %1[105] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %223 = cc.load %222 : !cc.ptr<f64>
+    quake.ry (%223) %19 : (f64, !quake.ref) -> ()
+    %224 = cc.compute_ptr %1[106] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %225 = cc.load %224 : !cc.ptr<f64>
+    quake.ry (%225) %22 : (f64, !quake.ref) -> ()
+    %226 = cc.compute_ptr %1[107] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %227 = cc.load %226 : !cc.ptr<f64>
+    quake.ry (%227) %25 : (f64, !quake.ref) -> ()
+    %228 = cc.compute_ptr %1[108] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %229 = cc.load %228 : !cc.ptr<f64>
+    quake.ry (%229) %28 : (f64, !quake.ref) -> ()
+    %230 = cc.compute_ptr %1[109] : (!cc.ptr<!cc.array<f64 x ?>>) -> !cc.ptr<f64>
+    %231 = cc.load %230 : !cc.ptr<f64>
+    quake.ry (%231) %31 : (f64, !quake.ref) -> ()
+    return
+  }
+}

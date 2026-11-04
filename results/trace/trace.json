@@ -1,0 +1,21 @@
+{
+  "hbtrace_version": "1.0",
+  "trace_id": "c7c2e2cf-c887-42e2-9e6e-e37556b6654a",
+  "mode": "passive",
+  "timestamp_start": 1792171081540586921,
+  "timestamp_end": 1792174353715862565,
+  "status": "SEALED_SUCCESS",
+  "client_environment": {
+    "hilbertbench_version": "1.0.0",
+    "python_version": "3.11.12",
+    "os_platform": "linux",
+    "frameworks": {}
+  },
+  "integrity_seal": {
+    "event_stream_checksum": "sha256:570bdf63073496200fef21f23dfc2dd053d2177c64764c716f74b4d8ccbb1722",
+    "artifact_count": 57640
+  },
+  "tags": {
+    "study": "variance_sweep"
+  }
+}

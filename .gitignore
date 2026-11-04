@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+*.pyc
+results/trace/events.jsonl
+results/traces/
+results/overhead_traces/
+results/slurm_*.out

@@ -74,7 +74,7 @@ def cmd_variance(a):
                 rows.append(row)
                 print(json.dumps(row), flush=True)
     if tape:
-        rows.append({"trace_dir": str(tape.dir_path)})
+        rows.append({"trace_dir": str(tape.dir_path.relative_to(HERE))})
     save_json(RESULTS / a.out, rows)
     np.savez_compressed(RESULTS / a.out.replace(".json", "_grads.npz"), **grads)
 
